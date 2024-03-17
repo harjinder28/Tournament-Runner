@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+
+nav{
+	background-color: #333;
+	color: #fff;
+}
+nav .navcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav div h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+nav ul li a:hover{
+    background-color: #4CAF50;
+    border:1px solid black;
+    border-radius: 5px;
+   
+}
+
+.bracketBtn{
+
+    width: 80px;
+    height: 40px;
+}
+.bracketBtn:hover{
+    background-color: #79c77a;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: #bbe7b3; */
+}
+
+.container {
+    display: flex;
+
+    /* height: 100%; */
+    /* background-color: #2de736; */
+    
+
+}
+
+.sidebar {
+
+    width: 20%;
+    height: 1920px;
+    /* height: 0cap; */
+    background-color: #c9dfc7;
+    padding: 20px;
+    border-right: 2px solid black;
+    
+}
+.updateBtn:hover{
+    background-color: #79c77a;
+}
+.sidebar-menu {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navcontainer h1{
+    border-bottom:4px solid #4CAF50;
+}
+.menu-item {
+    padding: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    
+    border-radius: 4px;
+    border: 0.5px solid #c0c0c0;
+}
+.item{
+    background-color: #4CAF50;
+}
+.menu-item:hover{
+    background-color: #676b69;
+}
+
+.content {
+    width: 80%;
+    /* flex: 1; */
+    /* height: 100%; */
+    padding: 20px;
+    background-color: #ebdfdf;
+    /* border-left: 2px solid black; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    display: none;
+    
+}
+.section.active {
+    
+    display: block;
+    /* background-color: #d8a80b; */
+    width: 100%;
+    height: 100%;
+    /* height: 0cap; */
+    
+}
+
+/*.tabactive { 
+    display: block;
+}*/
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+/* Add your existing CSS styles */
+
+/* Multitab styles */
+.multitab .tab-header {
+    display: flex;
+}
+
+.multitab .tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.multitab .tab-item:hover,
+.multitab .tab-item.tabactive {
+    background-color: #bdbdbd;
+}
+
+.multitab .tab-content {
+    margin-top: 20px;
+}
+
+.multitab .tab {
+    display: none;
+}
+
+.tab.tabactive {
+    display: block;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.btnsv {
+	background-color: #ff0000;
+}
+.btnupd{
+	background-color: #4CAF50;
+}
+.input-field {
+    width: 70%;
+    margin-right: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #887d7de3;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+select.input-field {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+textarea.input-field {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    resize: vertical;
+}
+.teamTable{
+    width: 95%;
+    border-collapse: collapse;
+    background-color: #b6bdb9;
+}
+.teamTableDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.tab-content{
+    text-align: center;
+}
+.teamTable tbody tr th,td{
+    border-right: 1px solid #7c7878 ;
+    padding: 3px;
+    border-bottom: 1px solid #7c7878;
+    
+}
+ /*Custom CSS for Bracket Design */
+.bracket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.bracket-round {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.bracket-matchup {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.matchup::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid #ccc;
+    position: absolute;
+    left: -175px;
+    top: 0;
+}
+
+.matchup:first-child::before {
+    display: none;
+}
+
+.team-name {
+    flex: 1;
+    text-align: center;
+}
+
+.vs-text {
+    margin: 0 8px;
+}
+
+/* Apply some styles to make it more like a bracket */
+.round:last-child .matchup {
+    border-color: transparent;
+}
+
+.round:last-child .matchup::before {
+    display: none;
+}
+
+.round:first-child .matchup {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.round:last-child .matchup {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.round:not(:first-child) .matchup {
+    border-top: none;
+}
+
+.round:not(:last-child) .matchup {
+    border-bottom: none;
+}
+
+.bracket-diagram {
+  /* Add styles for the bracket diagram container */
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  align-items: center;
+}
+
+.bracket-round {
+  /* Add styles for each round in the bracket */
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  margin: 20px;
+}
+
+.bracket-matchup {
+  /* Add styles for each matchup in the bracket */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  width:150px;
+  padding: 10px;
+}
+
+.bracket-item {
+  /* Add styles for each item (team) in the bracket */
+  padding: 5px;
+}
+
+.vs {
+  /* Add styles for the "vs" separator between teams */
+  margin: 0 10px;
+}
+  .overlayTeam {
+    position: fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }
+	
+
+ .hiddendiv {
+    display: none;
+}
+  .popup-content {
+  	display:flex;
+  	justify-content:center;
+    align-items:center;
+  	flex-direction:column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+  }
+  .popup-content h2{
+  background-color: #4CAF50;
+  }
+  .popup-content input{
+  width: 80%;
+  }
